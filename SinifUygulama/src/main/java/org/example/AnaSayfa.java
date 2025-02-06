@@ -14,16 +14,21 @@ public class AnaSayfa  implements ActionListener {
 
         frame.setSize(500,500);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLayout(null );
+        frame.setLayout(null);
         frame.setVisible(true);
 
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
+        System.out.println("Tıklandı");
+
         if (e.getSource() == button){
-            ProfilSayfa profilSayfa = new ProfilSayfa();
+
+
             frame.dispose();
+            ProfilSayfa profilSayfa = new ProfilSayfa();
 
         }
     }
