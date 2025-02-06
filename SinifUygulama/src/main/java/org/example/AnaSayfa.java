@@ -1,8 +1,10 @@
 package org.example;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class AnaSayfa {
+public class AnaSayfa  implements ActionListener {
     JFrame frame = new JFrame();
     JButton button = new JButton("Profile göster");
     AnaSayfa(){
@@ -15,5 +17,14 @@ public class AnaSayfa {
         frame.setLayout(null );
         frame.setVisible(true);
 
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == button){
+            ProfilSayfa profilSayfa = new ProfilSayfa();
+            frame.dispose();
+
+        }
     }
 }
